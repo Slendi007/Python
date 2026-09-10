@@ -1,0 +1,44 @@
+[project]
+name = "first-proyectproety"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "first_proyectproety", from = "src"}]
+
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E","F","I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "black (>=26.5.1,<27.0.0)",
+    "isort (>=9.0.1,<10.0.0)",
+    "ruff (>=0.16.6,<0.17.0)",
+    "pre-commit (>=4.6.2,<5.0.0)"
+]
