@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Ana",
+        "edad": 28,
+        "ciudad": "Ciudad de México",
+        "activo": true,
+        "ventas": 1500
+    },
+    {
+        "nombre": "Carlos",
+        "edad": 35,
+        "ciudad": "Monterrey",
+        "activo": true,
+        "ventas": 2300
+    },
+    {
+        "nombre": "Laura",
+        "edad": 22,
+        "ciudad": "Ciudad de México",
+        "activo": false,
+        "ventas": 800
+    },
+    {
+        "nombre": "Pedro",
+        "edad": 41,
+        "ciudad": "Guadalajara",
+        "activo": true,
+        "ventas": 3100
+    }
+]
