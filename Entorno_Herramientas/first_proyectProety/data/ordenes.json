@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "product": "Laptop",
+        "quantity": 2,
+        "unit_price": 15000,
+        "tax_rate": 0.16
+    },
+    {
+        "id": 2,
+        "product": "Monitor",
+        "quantity": 1,
+        "unit_price": 5000,
+        "tax_rate": 0.16
+    },
+    {
+        "id": 3,
+        "product": "Teclado",
+        "quantity": 3,
+        "unit_price": 1200,
+        "tax_rate": 0.16
+    }
+]
