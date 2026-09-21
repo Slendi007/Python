@@ -20,7 +20,7 @@ def procesar_lote(lote: list[int]) -> None:
 
 
 def main() -> None:
-    datos = list(range(1, 11))
+    datos: list[int] = list(range(1, 11))
 
     print("=== GENERADOR POR LOTES ===")
 

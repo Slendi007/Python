@@ -4,7 +4,7 @@ from pathlib import Path
 
 def leer_json(ruta: str) -> list[dict]:
 
-    archivo = Path(ruta)
+    archivo: Path = Path(ruta)
 
     if not archivo.exists():
         raise FileNotFoundError(f"No se encontró el archivo: {ruta}")
