@@ -1,0 +1,13 @@
+from typing import Protocol
+
+from .models import User
+
+
+class UserRepository(Protocol):
+    def add(self, user: User) -> None: ...
+
+    def get(self, user_id: int) -> User | None: ...
+
+    def get_all(self) -> list[User]: ...
+
+    def delete(self, user_id: int) -> bool: ...
