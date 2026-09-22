@@ -1,0 +1,32 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+RUN groupadd --system appgroup \
+    && useradd --system \
+    --gid appgroup \
+    --create-home \
+    appuser
+
+COPY pyproject.toml poetry.lock README.md ./
+
+RUN pip install --no-cache-dir poetry \
+    && poetry config virtualenvs.create false \
+    && poetry install \
+        --only main \
+        --no-root \
+        --no-interaction \
+        --no-ansi
+
+COPY --chown=appuser:appgroup src ./src
+
+RUN poetry install \
+    --only main \
+    --no-interaction \
+    --no-ansi
+
+USER appuser
+
+EXPOSE 8000
+
+CMD ["uvicorn", "first_proyectproety.seguridad_mantenimiento.app:app", "--host", "0.0.0.0", "--port", "8000"]
