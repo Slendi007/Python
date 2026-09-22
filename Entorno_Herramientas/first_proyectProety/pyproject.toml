@@ -18,8 +18,12 @@ dependencies = [
     "python-multipart (>=0.0.32,<0.0.33)",
     "pandas (>=3.0.6,<4.0.0)",
     "scikit-learn (>=1.9.1,<2.0.0)",
-    "joblib (>=1.6.0,<2.0.0)"
+    "joblib (>=1.6.0,<2.0.0)",
+    "typer (>=0.27.2,<0.28.0)"
 ]
+
+[project.scripts]
+orders = "first_proyectproety.cli_automatizacion.cli:main"
 
 [tool.poetry]
 packages = [{include = "first_proyectproety", from = "src"}]
